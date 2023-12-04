@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="pagetitle">
+  <h1>Dashboard</h1>
+  <nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+      <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+  </nav>
+</div>
+<section class="section dashboard">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card info-card sales-card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">AWS S3 <span>| Today</span></h5>
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>1524 events</h6>
+                  <span class="text-success small pt-1 fw-bold">15%</span> <span
+                    class="text-muted small pt-2 ps-1">increase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card info-card revenue-card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sources <span>| Today</span></h5>
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>4 Sources</h6>
+                  <span class="text-success small pt-1 fw-bold">2%</span> <span
+                    class="text-muted small pt-2 ps-1">engagement increase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card info-card customers-card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Code Invocations <span>| Today</span></h5>
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-bezier2"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>225 updates</h6>
+                  <span class="text-danger small pt-1 fw-bold">8%</span> <span
+                    class="text-muted small pt-2 ps-1">increase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card info-card customers-card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">New Interactions <span>| Today</span></h5>
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>5 areas</h6>
+                  <span class="text-success small pt-1 fw-bold">27%</span><span class="text-muted small pt-2 ps-1">High
+                    Engagement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Components Overview | <span>Today</span></h5>
+              <canvas id="trafficDoughnutChart"
+                style="max-height: 400px; display: block; box-sizing: border-box; height: 400px; width: 599px;"
+                width="599" height="400"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#trafficDoughnutChart'), {
+                    type: 'doughnut',
+                    data: {
+                      labels: [
+                        'Pricing Page',
+                        'Subscription',
+                        'Signup Form',
+                      ],
+                      datasets: [{
+                        label: 'Invocation Status',
+                        data: [60, 20, 20], // Update with your actual data percentages
+                        backgroundColor: [
+                          'rgb(54, 162, 235)',
+                          'rgb(255, 99, 132)',
+                          'rgb(124, 148, 147)'
+                        ],
+                        hoverOffset: 4
+                      }]
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Event Sources | <span>Today</span></h5>
+              <canvas id="congestedAreasDoughnutChart"
+                style="max-height: 400px; display: block; box-sizing: border-box; height: 400px; width: 599px;"
+                width="599" height="400"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#congestedAreasDoughnutChart'), {
+                    type: 'doughnut',
+                    data: {
+                      labels: [
+                        'Marketing Website',
+                        'Documentation Website',
+                        'Landing Page',
+                        'Web App Dashboard'
+                      ],
+                      datasets: [{
+                        label: 'Event Source',
+                        data: [25, 20, 15, 30], // Update with your actual data percentages
+                        backgroundColor: [
+                          'rgb(255, 99, 132)',
+                          'rgb(54, 162, 235)',
+                          'rgb(255, 205, 86)',
+                          'rgb(75, 192, 192)'
+                        ],
+                        hoverOffset: 4
+                      }]
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Traffic Analysis | <span>7 Days</span></h5>
+              <canvas id="pollutionChart"
+                style="max-height: 400px; display: block; box-sizing: border-box; height: 299px; width: 599px;"
+                width="599" height="299"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#pollutionChart'), {
+                    type: 'line',
+                    data: {
+                      labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                      datasets: [
+                        {
+                          label: 'New Users',
+                          data: [200, 180, 215, 220, 300, 280, 150],
+                          fill: false,
+                          borderColor: 'rgb(255, 99, 132)',
+                          // tension: 0,
+                          lineTension: 0.3,
+                        },
+                        {
+                          label: 'Repeat Users',
+                          data: [75, 82, 72, 105, 120, 92, 74],
+                          fill: false,
+                          borderColor: 'rgb(54, 162, 235)',
+                          // tension: 0,
+                          lineTension: 0.3,
+                        },
+                        {
+                          label: 'Highly Active Users',
+                          data: [30, 28, 32, 31, 33, 34, 29],
+                          fill: false,
+                          borderColor: 'rgb(75, 192, 192)',
+                          // tension: 0,
+                          lineTension: 0.3,
+                        }
+                      ]
+                    },
+                    options: {
+                      scales: {
+                        x: {
+                          grid: {
+                            display: false
+                          }
+                        },
+                        y: {
+                          beginAtZero: true,
+
+                          grid: {
+                            display: false
+                          }
+                        }
+                      }
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">User Visit/Engagement (Source: AWS S3) | <span>7 Days</span></h5>
+              <canvas id="smartCityBubbleChart"
+                style="max-height: 400px; display: block; box-sizing: border-box; height: 299px; width: 599px;"
+                width="599" height="299"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#smartCityBubbleChart'), {
+                    type: 'bubble',
+                    data: {
+                      labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                      datasets: [
+                        {
+                          label: 'User Interaction',
+                          data: [
+                            { x: 20, y: 30, r: 15 },
+                            { x: 40, y: 10, r: 10 },
+                            { x: 15, y: 37, r: 12 },
+                            { x: 32, y: 42, r: 33 }
+                          ],
+                          borderColor: 'rgb(255, 99, 132)',
+                          backgroundColor: 'rgba(255, 99, 132, 0.5)'
+                        },
+                        {
+                          label: 'User Engagement',
+                          data: [
+                            { x: 40, y: 25, r: 22 },
+                            { x: 24, y: 47, r: 11 },
+                            { x: 65, y: 11, r: 14 },
+                            { x: 11, y: 55, r: 8 }
+                          ],
+                          borderColor: 'rgb(75, 192, 192)',
+                          backgroundColor: 'rgba(75, 192, 192, 0.5)'
+                        }
+                      ]
+                    },
+                    options: {
+                      responsive: true,
+                      plugins: {
+                        legend: { position: 'top' },
+                        title: {
+                          display: true,
+                          text: 'User Visit/Engagement Management'
+                        }
+                      },
+                      scales: {
+                        x: {
+                          type: 'linear',
+                          position: 'bottom',
+                          scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                          }
+                        },
+                        y: {
+                          scaleLabel: {
+                            display: true,
+                            labelString: 'Severity/Intensity'
+                          }
+                        }
+                      }
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% endblock%}

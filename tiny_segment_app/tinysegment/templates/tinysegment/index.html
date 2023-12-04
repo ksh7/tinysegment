@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row mb-4">
+  <!-- Card 1 -->
+  <div class="col-md-10 offset-md-1">
+
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-8 offset-md-2">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <h5 class="card-title"><strong>TinySegment</strong> - Powered by Twillio Segment & AWS S3</h5>
+            <p class="card-text">
+              TinySegment is helps you delight your customers and ehance engagement.
+            </p>
+            <p class="card-text">
+              Visit our dummy pages: <a href="https://page1.aenv.site/" target="_blank">page 1</a> or <a href="https://page1.aenv.site/" target="_blank">page 2</a>
+            </p>
+            <div class="mt-3">
+              <button href="https://github.com/ksh7/tinysegment/tree/main/tinysegment_js" class="btn btn-outline-primary btn-sm mr-2">TinySegment.JS <i class="bi bi-arrow-up-right-circle"></i></button>
+              <button href="https://github.com/ksh7/tinysegment/" class="btn btn-outline-secondary btn-sm">Github <i class="bi bi-arrow-up-right-circle"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">How to Use?</h5>
+              <p class="card-text mb-3">
+                For Demo: visit our dummy pages at <a href="https://page1.aenv.site/" target="_blank">page 1</a> or <a href="https://page1.aenv.site/" target="_blank">page 2</a>
+              </p>
+            <p class="card-text">Install <strong>tinysegment.js</strong> library in your website where you've configured twilio segment.</p>
+            <p class="card-text">Configure it by adding values like including element ids that needs to trigger code updates:</p>
+            <pre>
+                // Initialize TinySegment.js
+
+                tinySegmentAPIURL.initializeAPIUrl('https://tiny.aenv.site/api_fetch_code');
+                
+                tinySegmentScrollObserver.initializeElments(["heading_banner_page1", "pricing_details_page1", "article_description_page1"]);
+                
+                tinySegmentElementTracking.initializeEvents([{"heading_banner_page1": "viewing_header"}, {"pricing_details_page1": "viewing_pricing"}, {"article_description_page1": "viewing_article"}]);
+            </pre>
+            <p class="card-text">For above <strong>elements ids and events</strong> create respective code components and conditions in web app</p>
+            <p class="card-text">Now you can start viewing parts of your website being update based on who is visiting your pages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock%}

@@ -1,0 +1,132 @@
+[
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 1,
+        "fields": {
+            "name": "Pricing Component",
+            "description": "Display pricing information",
+            "source_event": "viewing_pricing",
+            "source_div_id": "pricing_div",
+            "html_code": "<div><p>Choose a plan: <strong>Basic</strong>, <strong>Pro</strong></p><a href='#'>Subscribe Now</a></div>",
+            "code_placement": "replace",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 2,
+        "fields": {
+            "name": "Subscribe Component",
+            "description": "Encourage users to subscribe",
+            "source_event": "viewing_subscribe",
+            "source_div_id": "subscribe_div",
+            "html_code": "<div><p>Subscribe to our newsletter for updates!</p><a href='#'>Join Now</a></div>",
+            "code_placement": "bottom",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 3,
+        "fields": {
+            "name": "Paragraph Component",
+            "description": "Provide additional information",
+            "source_event": "reading_paragraph",
+            "source_div_id": "paragraph_div",
+            "html_code": "<div><p>This is a sample paragraph with <a href='#'>embedded link</a>.</p></div>",
+            "code_placement": "top",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 4,
+        "fields": {
+            "name": "Special Offer Component",
+            "description": "Highlight a special offer",
+            "source_event": "viewing_special_offer",
+            "source_div_id": "special_offer_div",
+            "html_code": "<div><p>Don't miss out on our special offer!</p><a href='#'>Get Discount</a></div>",
+            "code_placement": "replace",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 5,
+        "fields": {
+            "name": "Product Details Component",
+            "description": "Display detailed product information",
+            "source_event": "viewing_product_details",
+            "source_div_id": "product_details_div",
+            "html_code": "<div><p>Explore the features of our product.</p><a href='#'>Learn More</a></div>",
+            "code_placement": "bottom",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 6,
+        "fields": {
+            "name": "About Us Component",
+            "description": "Introduce the company and its mission",
+            "source_event": "viewing_about_us",
+            "source_div_id": "about_us_div",
+            "html_code": "<div><p>Learn more about our company and mission.</p><a href='#'>Discover Us</a></div>",
+            "code_placement": "top",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 7,
+        "fields": {
+            "name": "FAQ Component",
+            "description": "Answer frequently asked questions",
+            "source_event": "viewing_faq",
+            "source_div_id": "faq_div",
+            "html_code": "<div><p>Find answers to common questions in our FAQ section.</p><a href='#'>Explore FAQs</a></div>",
+            "code_placement": "replace",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 8,
+        "fields": {
+            "name": "Contact Us Component",
+            "description": "Encourage users to contact for inquiries",
+            "source_event": "contacting_us",
+            "source_div_id": "contact_us_div",
+            "html_code": "<div><p>Have questions? Contact us for assistance.</p><a href='#'>Contact Now</a></div>",
+            "code_placement": "bottom",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 9,
+        "fields": {
+            "name": "Latest News Component",
+            "description": "Showcasing the latest news and updates",
+            "source_event": "viewing_latest_news",
+            "source_div_id": "latest_news_div",
+            "html_code": "<div><p>Stay updated with our latest news and announcements.</p><a href='#'>Read Now</a></div>",
+            "code_placement": "top",
+            "status": "Active"
+        }
+    },
+    {
+        "model": "tinysegment.codecomponent",
+        "pk": 10,
+        "fields": {
+            "name": "Event Schedule Component",
+            "description": "Display upcoming events and schedules",
+            "source_event": "viewing_event_schedule",
+            "source_div_id": "event_schedule_div",
+            "html_code": "<div><p>Check out our upcoming events and plan your schedule.</p><a href='#'>View Schedule</a></div>",
+            "code_placement": "replace",
+            "status": "Active"
+        }
+    }
+]
